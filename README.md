@@ -1,2 +1,2 @@
 <p>Paulo Haliski - conectado</p>
-<p>Nathan Henrique - </p>
+<p>Nathan Henrique - conectado </p>
