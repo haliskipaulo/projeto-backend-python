@@ -30,6 +30,8 @@ def registrar():
 def login():
     if request.method == 'GET':
         return render_template('login.html')
+    elif request.method == 'POST':
+
 
     
 
