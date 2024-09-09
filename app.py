@@ -25,6 +25,12 @@ def registrar():
         db.session.add(novo_usuario)
         db.session.commit()
         return redirect(url_for('home'))
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
+
     
 
 
