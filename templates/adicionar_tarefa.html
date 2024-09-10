@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Tarefa</title>
+</head>
+<body>
+    <h1>Adicionar Tarefa para {{ usuario.nome }}</h1>
+    <form action="/tarefas/{{ usuario.id }}" method="POST">     <!-- pega o id do usuario -->
+
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" required><br>
+        
+        <label for="data_inicio">Data Início:</label>
+        <input type="date" name="data_inicio" id="data_inicio" required><br>
+        
+        <label for="data_fim">Data Fim:</label>
+        <input type="date" name="data_fim" id="data_fim" required><br>
+        
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" required></textarea><br>
+        
+        <label for="status">Status:</label>
+        <select name="status" id="status" required>
+            <option value="pendente">Pendente</option>
+            <option value="em andamento">Em Andamento</option>
+            <option value="concluída">Concluída</option>
+        </select><br>
+
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
+</body>
+</html>

@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarefas de {{ usuario.nome }}</title>
 </head>
-
 <body>
+    <h1>Tarefas de {{ usuario.nome }}</h1>
+    
+    
+    <div>
+        <a href="/tarefas_page/{{ usuario.id }}?status=pendente">Pendentes</a> |
+        <a href="/tarefas_page/{{ usuario.id }}?status=em andamento">Em Andamento</a> |
+        <a href="/tarefas_page/{{ usuario.id }}?status=concluída">Concluídas</a> |
+        <a href="/tarefas_page/{{ usuario.id }}">Todas</a> 
+    </div>
 
-    <h1>Login Feito</h1>
+    <ul>
+        {% for tarefa in tarefas %}
+            <li>
+                <strong>{{ tarefa.titulo }}</strong> - {{ tarefa.status }}
+                <p>Início: {{ tarefa.data_inicio }}</p>
+                <p>Fim: {{ tarefa.data_fim }}</p>
+                <p>{{ tarefa.descricao }}</p>
+                <a href="/editar_tarefa/{{ tarefa.id }}">Editar</a> 
+            </li>
+        {% else %}
+            <p>Não há tarefas para o status selecionado.</p>
+        {% endfor %}
+    </ul>
 
+    <a href="/tarefas/{{ usuario.id }}">Adicionar Nova Tarefa</a>
 </body>
-
 </html>

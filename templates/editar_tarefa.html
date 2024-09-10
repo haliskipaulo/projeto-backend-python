@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefa</title>
+</head>
+<body>
+    <h1>Editar Tarefa</h1>
+    
+    <form action="/editar_tarefa/{{ tarefa.id }}" method="POST">  <!-- pega o id do usuario -->
+
+        <label for="titulo">Título:</label>
+        <input type="text" name="titulo" id="titulo" value="{{ tarefa.titulo }}" required><br>
+        
+        <label for="data_inicio">Data Início:</label>
+        <input type="date" name="data_inicio" id="data_inicio" value="{{ tarefa.data_inicio }}" required><br>
+        
+        <label for="data_fim">Data Fim:</label>
+        <input type="date" name="data_fim" id="data_fim" value="{{ tarefa.data_fim }}" required><br>
+        
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" required>{{ tarefa.descricao }}</textarea><br>
+        
+        <label for="status">Status:</label>
+        <select name="status" id="status" required>
+            <option value="pendente" {% if tarefa.status == 'pendente' %}selected{% endif %}>Pendente</option>
+            <option value="em andamento" {% if tarefa.status == 'em andamento' %}selected{% endif %}>Em Andamento</option>
+            <option value="concluída" {% if tarefa.status == 'concluída' %}selected{% endif %}>Concluída</option>
+        </select><br>
+
+        <button type="submit">Atualizar Tarefa</button>
+    </form>
+</body>
+</html>
