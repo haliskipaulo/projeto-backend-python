@@ -21,11 +21,17 @@ def registrar():
         email = request.form['email']
         telefone = request.form['telefone']
         senha = request.form['senha']
+        senha2 = request.form['senha2']
+        if senha != senha2:
+            return render_template('cadastro_page.html', erro="As senhas não coincidem.")
+
         novo_usuario = Usuario(nome=nome,email=email,telefone=telefone,senha=senha)
         db.session.add(novo_usuario)
         db.session.commit()
         return redirect(url_for('home'))
-    
+
+
+
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
