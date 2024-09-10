@@ -25,16 +25,17 @@ def registrar():
         db.session.add(novo_usuario)
         db.session.commit()
         return redirect(url_for('home'))
+    
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     if request.method == 'GET':
         return render_template('login.html')
     elif request.method == 'POST':
-
-
-    
-
+        email = request.form['email']
+        senha = request.form['senha']
+        
+# por enquanto achei melhor fazer o login com email + senha sem username
 
 
 if __name__ == '__main__':
