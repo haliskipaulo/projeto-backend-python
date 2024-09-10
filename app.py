@@ -34,8 +34,21 @@ def login():
     elif request.method == 'POST':
         email = request.form['email']
         senha = request.form['senha']
+        usuario = db.session.query(Usuario).filter_by(email=email, senha=senha).first()
+        
+        if usuario:
+            return redirect(url_for('tarefas_page'))
+        else:
+            return redirect(url_for('login'))
         
 # por enquanto achei melhor fazer o login com email + senha sem username
+    
+
+@app.route('/tarefas_page')
+def tarefas_page():
+    return render_template('tarefas_page.html')
+        
+
 
 
 if __name__ == '__main__':
