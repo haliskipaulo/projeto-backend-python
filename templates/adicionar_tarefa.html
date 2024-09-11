@@ -28,6 +28,14 @@
             <option value="concluída">Concluída</option>
         </select><br>
 
+        <label for="userTarefa_id">Atribuir a:</label>
+        <select name="userTarefa_id" id="userTarefa_id" required>
+            {% for u in usuarios %}
+            <option value="{{ u.id }}">{{ u.nome }}</option>
+            {% endfor %}
+        </select><br>
+
+
         <button type="submit">Adicionar Tarefa</button>
     </form>
 </body>

@@ -54,24 +54,25 @@ def login():
 @app.route('/tarefas/<int:usuario_id>', methods=['GET', 'POST'])
 def adicionar_tarefa(usuario_id):
     usuario = db.session.query(Usuario).filter_by(id=usuario_id).first()
+    usuarios = db.session.query(Usuario).all()
     
     if request.method == 'GET':
-        return render_template('adicionar_tarefa.html', usuario=usuario)
-    
-    elif request.method == 'POST':
-    
+        return render_template('adicionar_tarefa.html', usuario=usuario, usuarios=usuarios)
+
+    elif request.method == 'POST':    
         titulo = request.form['titulo']
         data_inicio_str = request.form['data_inicio']
         data_fim_str = request.form['data_fim']
         descricao = request.form['descricao']
         status = request.form['status']
+        userTarefa_id = request.form['userTarefa_id']
 
         
         data_inicio = datetime.datetime.strptime(data_inicio_str, '%Y-%m-%d').date()
         data_fim = datetime.datetime.strptime(data_fim_str, '%Y-%m-%d').date()
 
     
-        nova_tarefa = Tarefa(titulo=titulo, data_inicio=data_inicio, data_fim=data_fim,descricao=descricao,status=status,        usuario_id=usuario_id)
+        nova_tarefa = Tarefa(titulo=titulo, data_inicio=data_inicio, data_fim=data_fim,descricao=descricao,status=status,        usuario_id=userTarefa_id)
         db.session.add(nova_tarefa)
         db.session.commit()
 
