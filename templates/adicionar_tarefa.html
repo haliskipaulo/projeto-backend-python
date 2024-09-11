@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Tarefa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
+<header>
+
+    <div class="namepagina">
+        <h1>Safe Task</h1>
+    </div>
+
+</header>
+
 <body>
     <h1>Adicionar Tarefa para {{ usuario.nome }}</h1>
     <form action="/tarefas/{{ usuario.id }}" method="POST">     <!-- pega o id do usuario -->

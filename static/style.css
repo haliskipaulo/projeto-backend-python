@@ -6,7 +6,8 @@ body {
 }
 
 .namepagina{
-    color: #080370;
+    color: #080370; 
+    background-color: #c3c0f6;
     margin: 0px;
     padding: 5px;
     text-align: center;
@@ -15,6 +16,7 @@ body {
 }
 
 .botoes_login_cadastro {
+    padding: 30px;
     display: flex;
     flex-direction: row;    
     justify-content: center;
