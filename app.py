@@ -43,8 +43,6 @@ def registrar():
         return redirect(url_for('home'))
 
 
-
-
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     if request.method == 'GET':
@@ -57,10 +55,8 @@ def login():
         if usuario:
             return redirect(url_for('tarefas_page', usuario_id=usuario.id))
         else:
-            return redirect(url_for('login'))
-        
-# por enquanto achei melhor fazer o login com email + senha sem username
-    
+            return render_template('login.html', erro="Usuário ou senha inválidos")
+
 
 @app.route('/tarefas/<int:usuario_id>', methods=['GET', 'POST'])
 def adicionar_tarefa(usuario_id):
