@@ -20,7 +20,8 @@ body {
 
 .login {
     color: #060246;
-    background-color: #c3c0f6;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
     border-radius: 8px;    
     padding: 30px;
     max-width: 500px;   

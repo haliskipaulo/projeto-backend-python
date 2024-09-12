@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Task</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_editar.css') }}">
 </head>
 
 <header>
@@ -16,7 +16,7 @@
 </header>
 
 <body>
-    <h1>Editar Tarefa</h1>
+    <h1 class="editar_tarefa">Editar Tarefa</h1>
     
     <form action="/editar_tarefa/{{ tarefa.id }}" method="POST">  <!-- pega o id do usuario -->
 
