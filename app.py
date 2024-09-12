@@ -109,7 +109,16 @@ def deletar_tarefa(tarefa_id):
         db.session.delete(tarefa)
         db.session.commit()
         return redirect(url_for('tarefas_page', usuario_id=tarefa.usuario_id))
-    
+
+
+@app.route('/deletar_usuario/<int:user_id>', methods=['GET'])
+def deletar_usuario(user_id):
+    usuario = db.session.query(Usuario).filter_by(id=user_id).first()
+    if usuario:
+        db.session.delete(usuario)
+        db.session.commit()
+        return redirect(url_for('home'))
+
 
 @app.route('/tarefas_page/<int:usuario_id>', methods=['GET'])
 def tarefas_page(usuario_id):

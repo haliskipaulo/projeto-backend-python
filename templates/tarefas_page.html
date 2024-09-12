@@ -18,6 +18,7 @@
 <body>
     <h1 class="nome_usuario">Tarefas de {{ usuario.nome }}</h1>
     <h3 class="logout-container"><a href="/" class="logout"> Encerrar Sessão</a></h3>
+    <h3 class="logout-container"><a href="/deletar_usuario/{{ usuario.id }}" class="deletarUser">Apagar conta</a></h3>
     
     <div>
         <a href="/tarefas_page/{{ usuario.id }}?status=pendente">Pendentes</a> |

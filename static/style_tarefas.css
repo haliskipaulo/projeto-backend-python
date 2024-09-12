@@ -44,6 +44,19 @@ header {
     color: darkred;
     text-decoration: underline;
 }
+.deletarUser {
+    color: crimson;
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+.deletarUser:hover {
+    background-color: white;
+    color: darkred;
+    text-decoration: underline;
+}
 
 div {
     margin: 10px;
