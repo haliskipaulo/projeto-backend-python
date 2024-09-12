@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+
+.namepagina{
+    color: #080370; 
+    background-color: #c3c0f6;
+    padding: 5px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;     
+}
+
+.container{
+    padding: 50px;
+}
+
+
+.form_cadastro {
+    color: #060246;
+    background-color: #c3c0f6;
+    border-radius: 8px;    
+    padding: 30px;
+    max-width: 500px;   
+    margin: 0 auto; 
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 10px;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 95%; 
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #741f1f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%; 
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #080370;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%; 
+}
+
+button:hover{
+    background-color: #590404;
+}
+
+input[type="submit"]:hover {
+    background-color: #0a00c2;
+}
