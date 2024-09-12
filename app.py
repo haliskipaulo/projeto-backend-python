@@ -23,8 +23,19 @@ def registrar():
         telefone = request.form['telefone']
         senha = request.form['senha']
         senha2 = request.form['senha2']
+
+        usuario_existente_email = db.session.query(Usuario).filter_by(email=email).first()
+        usuario_existente_telefone = db.session.query(Usuario).filter_by(telefone=telefone).first()
+        usuario_existente_nome = db.session.query(Usuario).filter_by(nome=nome).first()
+
         if senha != senha2:
             return render_template('cadastro_page.html', erro="As senhas não coincidem.")
+        elif usuario_existente_email:
+            return render_template('cadastro_page.html', erro="O email já está em uso.")
+        elif usuario_existente_telefone:
+            return render_template('cadastro_page.html', erro="O telefone já está em uso.")
+        elif usuario_existente_nome:
+            return render_template('cadastro_page.html', erro="O nome ja está em uso")
 
         novo_usuario = Usuario(nome=nome,email=email,telefone=telefone,senha=senha)
         db.session.add(novo_usuario)
