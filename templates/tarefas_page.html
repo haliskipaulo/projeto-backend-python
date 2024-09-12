@@ -34,6 +34,7 @@
                 <p>Fim: {{ tarefa.data_fim }}</p>
                 <p>{{ tarefa.descricao }}</p>
                 <a href="/editar_tarefa/{{ tarefa.id }}">Editar</a> 
+                <a href = '/deletar_tarefa/{{tarefa.id}}'> Excluir </a>
             </li>
         {% else %}
             <p>Não há tarefas para o status selecionado.</p>
