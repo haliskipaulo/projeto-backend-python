@@ -37,10 +37,11 @@
     <ul>
         {% for tarefa in tarefas %}
             <li>
-                <strong>{{ tarefa.titulo }}</strong> - {{ tarefa.status }}
-                <p>Início: {{ tarefa.data_inicio }}</p>
-                <p>Fim: {{ tarefa.data_fim }}</p>
-                <p>{{ tarefa.descricao }}</p>
+                <p><strong>Tarefa: </strong> {{ tarefa.titulo }}</p>
+                <p><strong>Status: </strong> {{ tarefa.status }}</p>
+                <p><strong>Início: </strong> {{ tarefa.data_inicio }}</p>
+                <p><strong>Fim: </strong> {{ tarefa.data_fim }}</p>
+                <p><strong>Descrição: </strong> {{ tarefa.descricao }}</p>
                 <a href="/editar_tarefa/{{ tarefa.id }}">Editar</a> 
                 <a href = '/deletar_tarefa/{{tarefa.id}}'> Excluir </a>
             </li>
