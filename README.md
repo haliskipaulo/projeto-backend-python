@@ -41,6 +41,6 @@
   <li>HTML, CSS para o front-end</li>
 </ul>
 
-<p>Recondamos logar na conta de usuário "paulo@gmail.com" com a senha "senha123", onde criamos tarefas pré cadastradas para fins de teste.</p>
+<p>Recomendamos logar na conta de usuário "paulo@gmail.com" com a senha "senha123", onde criamos tarefas pré cadastradas para fins de teste.</p>
 
 <p>Desenvolvido por Nathan Henrique e Paulo Haliski.</p>
