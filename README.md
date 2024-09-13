@@ -21,7 +21,18 @@
 <p>Entre com seu email e senha, caso sua senha esteja incorreta ou seu email não existir no sistema, o usuário receberá uma mensagem de erro.</p>
  
 <h2>Menu de tarefas</h2>
- 
+<p>Na menu principal de tarefas, são mostradas todas as tarefas atribuídas ao usuário, podendo ser editadas e excluidas, além de ser filtradas por:</p>
+<ul>
+    <li>Pendentes</li>
+    <li>Em andamento</li>
+    <li>Concluídas</li>
+    <li>Todas</li>
+</ul>
+<p>O botão "encerrar sessão" desloga o usuário e redireciona para a página inicial.</p>
+<p>O botão "apagar conta" pergunta se o usuário quer deletar sua conta, caso confirme, a sua conta é apagada.</p>
+<h3>Adicionar uma tarefa</h3>
+<p>Ao adicionar uma tarefa, deve-se preencher dados sobre a tarefa, e clicar no botão "Adicionar tarefa".</p>
+
 <h2>Tecnologias Utilizadas</h2>
 <ul>
   <li>Python</li>
@@ -30,5 +41,6 @@
   <li>HTML, CSS para o front-end</li>
 </ul>
 
+<p>Recondamos logar na conta de usuário "paulo@gmail.com" com a senha "senha123", onde criamos tarefas pré cadastradas para fins de teste.</p>
 
-<p>Desenvolvido por Nathan Henrique e Paulo Haliski</p>
+<p>Desenvolvido por Nathan Henrique e Paulo Haliski.</p>
